@@ -8,7 +8,7 @@ import Login from './components/Login/Login';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
