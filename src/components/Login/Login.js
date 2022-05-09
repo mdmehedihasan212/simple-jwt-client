@@ -31,17 +31,15 @@ const Login = () => {
 
     return (
         <section className='mx-auto mt-4' style={{ width: '500px' }}>
-            <h1 className='text-center my-2'>Login</h1>
+            <h1 className='text-center my-4'>Login</h1>
             <form onSubmit={handleToSubmit}>
-                <div className="mb-2">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                    <input name="email" type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                <div className="mb-3">
+                    <input name="email" type="email" placeholder='Email' className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                 </div>
-                <div className="mb-2">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input name="password" type="password" className="form-control" id="exampleInputPassword1" />
+                <div className="mb-3">
+                    <input name="password" type="password" placeholder='Password' className="form-control" id="exampleInputPassword1" />
                 </div>
-                <button type="submit" className="btn btn-primary w-100 mx-auto mt-2">Submit</button>
+                <button type="submit" className="btn btn-primary w-50 mx-auto ">Submit</button>
             </form>
         </section>
     );
