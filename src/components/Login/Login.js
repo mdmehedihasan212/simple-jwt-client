@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+
+    const navigate = useNavigate();
 
     const handleToSubmit = event => {
         event.preventDefault();
@@ -18,6 +21,10 @@ const Login = () => {
 
             .then(res => res.json())
             .then(data => {
+                if (data.success) {
+                    localStorage.setItem('token', data.token);
+                    navigate('/orders');
+                }
                 console.log(data);
             })
     }
